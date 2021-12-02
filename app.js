@@ -16,7 +16,7 @@ const morgan = require('morgan');
 app.use(morgan('tiny'));
 
 // manajemen file agar rapih
-const routers = require('./routers');
+const routers = require('./server/routes/routers');
 app.use(routers);
 
 // jalankan server

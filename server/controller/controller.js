@@ -1,16 +1,6 @@
-require('./connection');
-const express = require('express');
-const routers = express.Router();
-const Player = require('./Player');
-const multer = require('multer');
+const Player = require('../model/Player');
 
-// index
-routers.get('/', (req, res) => {
-  res.send('chapter 8 with react and express js');
-});
-
-// get data list players
-routers.get('/players', async (req, res) => {
+const findAllPlayer = async (req, res) => {
   try {
     const players = await Player.find();
     if (players.length > 0) {
@@ -31,10 +21,9 @@ routers.get('/players', async (req, res) => {
       message: error.message,
     });
   }
-});
+};
 
-// get single list player
-routers.get('/player/:id', async (req, res) => {
+const findSinglePlayer = async (req, res) => {
   try {
     const player = await Player.findById(req.params.id);
     if (player) {
@@ -55,10 +44,9 @@ routers.get('/player/:id', async (req, res) => {
       message: error.message,
     });
   }
-});
+};
 
-// create players
-routers.post('/player', multer().none(), async (req, res) => {
+const createPlayer = async (req, res) => {
   const { username, email, password, experience, lvl } = req.body;
   try {
     const player = await Player.create({
@@ -86,10 +74,9 @@ routers.post('/player', multer().none(), async (req, res) => {
       message: error.message,
     });
   }
-});
+};
 
-// update player
-routers.put('/player/:id', multer().none(), async (req, res) => {
+const updatePlayer = async (req, res) => {
   const { username, email, password, experience, lvl } = req.body;
   try {
     const result = await Player.updateOne(
@@ -122,9 +109,9 @@ routers.put('/player/:id', multer().none(), async (req, res) => {
       message: error.message,
     });
   }
-});
+};
 
-routers.delete('/player/:id', async (req, res) => {
+const deletePlayer = async (req, res) => {
   try {
     const result = await Player.deleteOne({ _id: req.params.id });
     if (result.deletedCount == 1) {
@@ -146,5 +133,6 @@ routers.delete('/player/:id', async (req, res) => {
       message: error.message,
     });
   }
-});
-module.exports = routers;
+};
+
+module.exports = { findAllPlayer, findSinglePlayer, createPlayer, updatePlayer, deletePlayer };
