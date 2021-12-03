@@ -1,5 +1,9 @@
 const Player = require('../model/Player');
 
+const Home = (req, res) => {
+  res.send('chapter 8 with react and express js');
+};
+
 const findAllPlayer = async (req, res) => {
   try {
     const players = await Player.find();
@@ -135,4 +139,4 @@ const deletePlayer = async (req, res) => {
   }
 };
 
-module.exports = { findAllPlayer, findSinglePlayer, createPlayer, updatePlayer, deletePlayer };
+module.exports = { findAllPlayer, findSinglePlayer, createPlayer, updatePlayer, deletePlayer, Home };

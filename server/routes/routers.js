@@ -5,24 +5,13 @@ const Player = require('../model/Player');
 const multer = require('multer');
 const controller = require('../controller/controller');
 
-// index
-routers.get('/', (req, res) => {
-  res.send('chapter 8 with react and express js');
-});
+routers.get('/', controller.Home); // index
 
-// get data list players
-routers.get('/players', controller.findAllPlayer);
-
-// get single list player
-routers.get('/player/:id', controller.findSinglePlayer);
-
-// create players
-routers.post('/player', multer().none(), controller.createPlayer);
-
-// update player
-routers.put('/player/:id', multer().none(), controller.updatePlayer);
-
-// delete player
-routers.delete('/player/:id', controller.deletePlayer);
+//API Player
+routers.get('/api/players', controller.findAllPlayer); // get data list players
+routers.get('/api/player/:id', controller.findSinglePlayer); // get single list player
+routers.post('/api/player', multer().none(), controller.createPlayer); // create players
+routers.put('/api/player/:id', multer().none(), controller.updatePlayer); // update player
+routers.delete('/api/player/:id', controller.deletePlayer); // delete player
 
 module.exports = routers;
