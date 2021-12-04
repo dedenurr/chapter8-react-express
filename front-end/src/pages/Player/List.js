@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
-const List = () => {
+const List = (props) => {
   const [players, setPlayers] = React.useState([]);
   const history = useHistory();
 
@@ -20,10 +20,13 @@ const List = () => {
         alert(error);
       });
   }, []);
+
   return (
     <>
       <h2>Halaman List Player</h2>
-      <a href="/player/create">+ Create</a>
+      <a href="/player/create">+ Create Player</a>
+      <br></br>
+      <br></br>
       <table>
         <thead>
           <tr>

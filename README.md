@@ -7,3 +7,5 @@ yarn start in folder back-end
 
 run react server 4000 :
 yarn start in folder front-end
+
+- swagger dokumentasi

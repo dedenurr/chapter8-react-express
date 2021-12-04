@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// swagger ui api documentation
+const swaggerJSON = require('./player-api-docs-Swagger20.json');
+const swaggerUI = require('swagger-ui-express');
+app.use('/api-docs-player', swaggerUI.serve, swaggerUI.setup(swaggerJSON));
+
 // mengirim dan menerima data dari klien
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
