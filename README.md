@@ -8,4 +8,5 @@ yarn start in folder back-end
 run react server 4000 :
 yarn start in folder front-end
 
-- swagger dokumentasi
+for view documentation -> run express server and then visit
+http://localhost:3000/api-docs-player/
