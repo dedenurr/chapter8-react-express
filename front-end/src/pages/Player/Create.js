@@ -20,6 +20,7 @@ const Create = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // update link post
       const response = await Axios.post('http://localhost:3000/api/player/post', player);
       const { status, message } = response.data;
       if (status === 'success create player') {
