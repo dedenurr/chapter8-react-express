@@ -6,16 +6,11 @@
     "contact": {},
     "version": "1.0"
   },
-  "_servers": [
+  "servers": [
     {
       "url": "http://localhost:3000/api",
       "variables": {},
       "description": "localhost"
-    },
-    {
-      "url": "http://localhost:3001/api",
-      "variables": {},
-      "description": "dev"
     }
   ],
   "paths": {

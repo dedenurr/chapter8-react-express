@@ -1,0 +1,278 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "API Player",
+    "description": "Daftar API Player Chapter 8 Dede Nurrahman",
+    "contact": {}
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "securityDefinitions": {},
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/players/": {
+      "get": {
+        "description": "Get All Data Players",
+        "summary": "getPlayers",
+        "tags": [
+          "Player"
+        ],
+        "operationId": "getPlayers",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Sukses",
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/player/{_id}": {
+      "get": {
+        "description": "Get Data Players By Id",
+        "summary": "getPlayerId",
+        "tags": [
+          "Player"
+        ],
+        "operationId": "getPlayerId",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Id Player"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sukses",
+            "headers": {}
+          },
+          "404": {
+            "description": "Not Found",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/player/post": {
+      "post": {
+        "description": "Insert Data Player",
+        "summary": "postPlayer",
+        "tags": [
+          "Player"
+        ],
+        "operationId": "postPlayer",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "enum": [
+              "application/x-www-form-urlencoded"
+            ],
+            "type": "string"
+          },
+          {
+            "name": "username",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "experience",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "lvl",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/player/update/{_id}": {
+      "put": {
+        "description": "Edit and Update Data Player",
+        "summary": "putPlayer",
+        "tags": [
+          "Player"
+        ],
+        "operationId": "putPlayer",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Id Player"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "enum": [
+              "application/x-www-form-urlencoded"
+            ],
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "username",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "experience",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "lvl",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/player/delete/{_id}": {
+      "delete": {
+        "description": "Delete Data Player",
+        "summary": "deletePlayer",
+        "tags": [
+          "Player"
+        ],
+        "operationId": "deletePlayer",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Id Player"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Content-Type": {
+      "title": "Content-Type",
+      "example": "application/x-www-form-urlencoded",
+      "type": "string",
+      "enum": [
+        "application/x-www-form-urlencoded"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Player",
+      "description": ""
+    }
+  ]
+}
