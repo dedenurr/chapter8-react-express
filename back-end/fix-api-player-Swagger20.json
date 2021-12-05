@@ -9,28 +9,18 @@
   "host": "localhost:3000",
   "basePath": "/api",
   "securityDefinitions": {},
-  "schemes": [
-    "http"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
   "paths": {
     "/players/": {
       "get": {
         "description": "Get All Data Players",
         "summary": "getPlayers",
-        "tags": [
-          "Player"
-        ],
+        "tags": ["Player"],
         "operationId": "getPlayers",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -48,14 +38,10 @@
       "get": {
         "description": "Get Data Players By Id",
         "summary": "getPlayerId",
-        "tags": [
-          "Player"
-        ],
+        "tags": ["Player"],
         "operationId": "getPlayerId",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "_id",
@@ -81,25 +67,17 @@
       "post": {
         "description": "Insert Data Player",
         "summary": "postPlayer",
-        "tags": [
-          "Player"
-        ],
+        "tags": ["Player"],
         "operationId": "postPlayer",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
         "parameters": [
           {
             "name": "Content-Type",
             "in": "header",
             "required": false,
-            "enum": [
-              "application/x-www-form-urlencoded"
-            ],
+            "enum": ["application/x-www-form-urlencoded"],
             "type": "string"
           },
           {
@@ -153,17 +131,11 @@
       "put": {
         "description": "Edit and Update Data Player",
         "summary": "putPlayer",
-        "tags": [
-          "Player"
-        ],
+        "tags": ["Player"],
         "operationId": "putPlayer",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
         "parameters": [
           {
             "name": "_id",
@@ -176,9 +148,7 @@
             "name": "Content-Type",
             "in": "header",
             "required": false,
-            "enum": [
-              "application/x-www-form-urlencoded"
-            ],
+            "enum": ["application/x-www-form-urlencoded"],
             "type": "string",
             "description": ""
           },
@@ -233,14 +203,10 @@
       "delete": {
         "description": "Delete Data Player",
         "summary": "deletePlayer",
-        "tags": [
-          "Player"
-        ],
+        "tags": ["Player"],
         "operationId": "deletePlayer",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "_id",
@@ -264,9 +230,7 @@
       "title": "Content-Type",
       "example": "application/x-www-form-urlencoded",
       "type": "string",
-      "enum": [
-        "application/x-www-form-urlencoded"
-      ]
+      "enum": ["application/x-www-form-urlencoded"]
     }
   },
   "tags": [
