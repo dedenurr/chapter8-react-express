@@ -31,7 +31,7 @@ const Single = () => {
   const handleDelete = async (id) => {
     if (window.confirm('yakin mau dihapus??')) {
       try {
-        const response = await Axios.delete('http://localhost:3000/api/player/' + id);
+        const response = await Axios.delete('http://localhost:3000/api/player/delete/' + id);
         const { message } = response.data;
         alert(message);
         history.push('/player');

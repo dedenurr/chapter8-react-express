@@ -2,33 +2,24 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0",
-    "title": "Chapter8Player",
+    "title": "API Player",
+    "description": "Daftar API Player",
     "contact": {}
   },
   "host": "localhost:3000",
   "basePath": "/api",
   "securityDefinitions": {},
-  "schemes": [
-    "http"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
   "paths": {
     "/players/": {
       "get": {
         "summary": "getPlayers",
-        "tags": [
-          "Misc"
-        ],
+        "tags": ["Misc"],
         "operationId": "getPlayers",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {
@@ -41,17 +32,11 @@
     "/player": {
       "post": {
         "summary": "postPlayer",
-        "tags": [
-          "Misc"
-        ],
+        "tags": ["Misc"],
         "operationId": "postPlayer",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
         "parameters": [
           {
             "name": "username",
@@ -103,17 +88,11 @@
     "/player/61a896d5c0340fddf62035fe": {
       "put": {
         "summary": "putPlayer",
-        "tags": [
-          "Misc"
-        ],
+        "tags": ["Misc"],
         "operationId": "putPlayer",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/x-www-form-urlencoded"
-        ],
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
         "parameters": [
           {
             "name": "username",
@@ -163,14 +142,10 @@
       },
       "delete": {
         "summary": "deletePlayer",
-        "tags": [
-          "Misc"
-        ],
+        "tags": ["Misc"],
         "operationId": "deletePlayer",
         "deprecated": false,
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [],
         "responses": {
           "200": {

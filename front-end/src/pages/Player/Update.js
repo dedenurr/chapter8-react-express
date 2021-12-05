@@ -36,7 +36,7 @@ const Update = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await Axios.put(`http://localhost:3000/api/player/${playerId}`, player);
+      const response = await Axios.put(`http://localhost:3000/api/player/update/${playerId}`, player);
       const { status, message } = response.data;
       if (status === 'success update') {
         alert(message);

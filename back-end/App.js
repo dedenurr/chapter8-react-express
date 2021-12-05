@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 // swagger ui api documentation
-const swaggerJSON = require('./swagger-palyer.json');
+const swaggerJSON = require('./api-swagger-palyer-OpenApi3.json');
 const swaggerUI = require('swagger-ui-express');
 app.use('/api-docs-player', swaggerUI.serve, swaggerUI.setup(swaggerJSON));
 

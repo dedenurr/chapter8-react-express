@@ -10,8 +10,8 @@ routers.get('/', controller.Home); // index
 //API Player
 routers.get('/api/players', controller.findAllPlayer); // get data list players
 routers.get('/api/player/:id', controller.findSinglePlayer); // get single list player
-routers.post('/api/player', multer().none(), controller.createPlayer); // create players
-routers.put('/api/player/:id', multer().none(), controller.updatePlayer); // update player
-routers.delete('/api/player/:id', controller.deletePlayer); // delete player
+routers.post('/api/player/post', multer().none(), controller.createPlayer); // create players
+routers.put('/api/player/update/:id', multer().none(), controller.updatePlayer); // update player
+routers.delete('/api/player/delete/:id', controller.deletePlayer); // delete player
 
 module.exports = routers;
